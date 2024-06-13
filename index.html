@@ -1,48 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
-<style>
-    .left-side {
-        background-color: blue;
-        color: white;
-        width: 50%;
-        height: 100vh;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platforma de Voluntariat</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #007BFF, #00C6FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .right-side {
-        background-color: green;
-        color: white;
-        width: 50%;
-        height: 100vh;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-</style>
+        .container {
+            display: flex;
+            width: 80%;
+            height: 80%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+
+        .side:hover {
+            transform: scale(1.05);
+        }
+
+        .side.left {
+            background-color: #007BFF;
+        }
+
+        .side.right {
+            background-color: #00C6FF;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
-    <div class="left-side">
-        <h1>Inscriete la un voluntariat</h1>
-        <button style="font-size: 24px;">Intra in contul tau</button>
-        <br>
-        <button style="font-size: 24px;">Creeaza-ti un cont nou</button>
-        <br>
-        <button style="font-size: 24px;">Inscriete fara cont</button>
-    </div>    
-    <div class="right-side">
-        <h1>Cauta voluntari</h1>
-        <button style="font-size: 24px;">Intra in organizatiei tale</button>
-        <br>
-        <button style="font-size: 24px;">Creeaza un cont organizatiei tale</button>
+    <div class="container">
+        <div class="side left">
+            <h1>Vrei să faci voluntariat?</h1>
+            <p>Alege una dintre opțiunile de mai jos pentru a începe:</p>
+            <div class="buttons">
+                <button>Intra in contul tau</button>
+                <button>Creeaza-ti un cont nou</button>
+                <button>Inscriete fara cont</button>
+            </div>
+        </div>
+        <div class="side right">
+            <h1>Organizația ta caută voluntari?</h1>
+            <p>Alege una dintre opțiunile de mai jos pentru a începe:</p>
+            <div class="buttons">
+                <button>Intra in organizatiei tale</button>
+                <button>Creeaza un cont organizatiei tale</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
