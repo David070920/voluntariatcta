@@ -129,7 +129,18 @@
                 <label for="confirm-password">Confirmă Parola</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-            <button type="submit">Înregistrează organizația</button>
+            <button type="submit" onclick="showPopup()">Înregistrează organizația</button>
+            <script>
+                function showPopup() {
+                    alert("Contul a fost creat cu succes!");
+                    var popupButton = document.createElement("button");
+                    popupButton.innerHTML = "Apasă aici pentru a intra în cont!";
+                    popupButton.onclick = function() {
+                        window.location.href = "loginorg.html";
+                    };
+                    document.body.appendChild(popupButton);
+                }
+            </script>
             <div class="alt-actions">
                 <a href="#">Ai deja un cont? Autentifică-te</a>
             </div>
